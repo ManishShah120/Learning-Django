@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>CourseOne</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            body {
+                background-color: black;
+                color: seashell;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Hello Viewer</h1>
+        <h2>Course Name: {{cname|slice:'2'}}</h2>
+        <h2>Course Duration: {{duration|upper}}</h2>
+        <h2>Course Seats: {{seats}}</h2>
+        <!-- <h2>Date: {{dt| time:'H:i'}}</h2> -->
+        <!-- <h3>Example 5.1</h3>
+        <h3>{{p1}}</h3>
+        <h3>{{p2}}</h3>
+        <h3>{{p3}}</h3>
+        
+        <h3>Example 5.2</h3>
+        <h3>{{p1|floatformat}}</h3>
+        <h3>{{p2|floatformat}}</h3>
+        <h3>{{p3|floatformat}}</h3>
+        
+        <h3>Example 5.3</h3>
+        <h3>{{p1|floatformat:3}}</h3>
+        <h3>{{p2|floatformat:3}}</h3>
+        <h3>{{p3|floatformat:3}}</h3> -->
+
+        {% comment %} <h3>If Example</h3>
+        {% if nm %}
+            <h3>Hello {{nm}}</h3>
+        {% endif %} {% endcomment %}
+
+        {% comment %} {{names}}
+        <h1>For Loop in Django</h1>
+
+        {% for name in names%}
+        {{forloop.revcounter}} {{name}}<br>
+        {% endfor %} {% endcomment %}
+
+        {% comment %} {{student}}
+        <br>
+        {{student.stu1.name}} {% endcomment %}
+
+        {% comment %} {{data}} {% endcomment %}
+        {% comment %} If we need key and value of variable at the same time {% endcomment %}
+        {% comment %} {% for key, value in data.items %}
+            {{key}}:  {{value}}<br>
+        {% endfor %} {% endcomment %}
+
+        {% comment %} {{data}} {% endcomment %}
+
+        {% for key, value in data.items  %}
+            {{key}} = {{value}}<br>
+            {% for k, v in value.items %}
+                {{forloop.parentloop.counter}} {{k}} : {{v}}<br>
+            {% endfor %}
+        {% endfor %}
+        </body>
+</html>
