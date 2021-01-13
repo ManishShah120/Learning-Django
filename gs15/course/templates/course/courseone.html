@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <h1>Start learning: {{cname}}</h1>
+    <img src="{% static 'images/Image_1.jpeg' %}" alt="Django Course Image"/>
+    {% comment %} Another way to load the image {% endcomment %}
+    <img src="{% get_static_prefix %}images/Image_1.jpeg" alt="Django Course Image">
+
+    <form action="">
+        <input type="button" value="Click Me" onclick="disp()" />
+    </form>
+    <script src="{% static 'js/all.js' %}"></script>
+</body>
+</html>
