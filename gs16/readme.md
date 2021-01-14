@@ -1,0 +1,2 @@
+# Static Files inside Application and How to use CSS, Javascript, Images in Django
+- In this way we don't require to do changes in the `settings.py` for the static files to work file as we did in `gs15`
