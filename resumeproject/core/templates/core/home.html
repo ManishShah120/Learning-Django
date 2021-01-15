@@ -1,0 +1,30 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="mt-5">
+    <div class="text-center">
+        <img src="{% static 'core/images/WhiteBG.png' %}" alt="Profile Pic" class="img-thumbnail" width="250px" height="150px">
+    </div>
+
+    <div class="mt-5 text-white mx-5 text-justify">
+        <h1 class="font-weight-bold st-font">Hello,</h1>
+        <div class="px-4" style="line-height:2rem;">
+            <p style="text-indent:100px;"> I am <b class="text-warning">Manish Shah</b> having Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio velit officiis optio pariatur quas at mollitia quos asperiores sequi. Nostrum corporis consequatur inventore rem, sit magnam eveniet numquam cumque veritatis!
+            </p>
+            
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates nesciunt doloribus sint ut id fuga qui. Veniam laudantium culpa modi dignissimos officiis, eveniet dolore praesentium distinctio beatae! Quibusdam, autem beatae. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio saepe tempore recusandae incidunt, asperiores, nesciunt necessitatibus modi facilis architecto vero odio. Libero, alias laudantium ut quam velit temporibus. Natus, qui.
+            </p>
+
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure a aut corporis! Magni iure architecto asperiores voluptatem, unde repellat veniam at! Recusandae sapiente eius fugit fuga aliquam quos ea quasi!
+            </p>
+        </div>
+    </div>
+    <div class="text-center">
+        <a href="{% url 'contact' %}" class="btn btn-outline-warning my-3 mr-5">Hire Me</a>
+        <a href="{% url 'contact' %} " class="btn btn-outline-info my-3">Contact</a>
+    </div>
+</div>
+{% endblock content %}
