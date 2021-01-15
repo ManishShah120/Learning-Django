@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>{% block title %}Default{% endblock title %}</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        {% block corecss %}
+            <link rel="stylesheet" href="{% static 'core/css/core.css' %}">
+        {% endblock corecss %}
+
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Django Course</li>
+            </ul>
+        </nav>
+        {% block content %}{% endblock content %}
+        {% comment %} We can also add some of the default block contents to use in future which will not effect {% endcomment %}
+        {% block content_1 %} {% endblock  %}
+        {% block content_2 %} {% endblock  %}
+        {% block content_3 %} {% endblock  %}
+        <script src="" async defer></script>
+    </body>
+</html>
