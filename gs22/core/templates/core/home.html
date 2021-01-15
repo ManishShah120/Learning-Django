@@ -1,0 +1,16 @@
+{% extends 'core/base.html' %}
+
+{% block title %}
+    {{block.super}}Home
+{% endblock title %} 
+{% comment %} To override the same title {% endcomment %}
+
+{% block content %}
+    <h2>This is the Home Page</h2>
+    <!-- In this way we can learn to implement template inheritance, we can also pass aditional context to this template -->
+    {% include 'core/topcourses.html' with p='PHP' %}
+    {% include 'core/topcourses.html' with p='Pygmae' %}
+    {% include 'core/topcourses.html' with p='Polygon' %}
+    {% comment %} Also in this teplate we can obstruct this from recieving it from the home view funcion in this way {% endcomment %}
+    {% comment %} {% include 'core/topcourses.html' with p='PHP' %} {% endcomment %}
+{% endblock content %}

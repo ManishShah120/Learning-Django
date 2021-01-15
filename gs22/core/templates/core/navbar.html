@@ -1,0 +1,14 @@
+<nav>
+    <ul>
+        <li><a href="/">Home</a></li>
+
+        <!-- First Approach -->
+        <li><a href="/about">About</a></li>
+        <li><a href="{% url 'aboutus' %}">About</a></li>
+        
+        <!-- Second Approach -->
+        <li><a href="/course/django">Django Course</a></li>
+        {% url 'courseone' as co %}
+        <li><a href="{{co}}">Django Course</a></li>
+    </ul>
+</nav>
