@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>{% block title %}Default{% endblock title %}</title>
+        <meta name="description" content="">
+        <link rel="stylesheet" href="{% static 'core/css/fonawesome_css.css' %}">
+        <link rel="stylesheet" href="{% static 'core/css/bootstrap.css' %}">
+        {% block corecss %}
+            <link rel="stylesheet" href="{% static 'core/css/core.css' %}">
+        {% endblock corecss %}
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Django Course</li>
+            </ul>
+        </nav>
+        {% block content %}{% endblock content %}
+        {% comment %} We can also add some of the default block contents to use in future which will not effect {% endcomment %}
+        {% block content_1 %} {% endblock  %}
+        {% block content_2 %} {% endblock  %}
+        {% block content_3 %} {% endblock  %}
+
+        <!-- To test that the botstrap is taking its effect -->
+        <button type="button" class="btn btn-primary">Primary</button>
+        <button type="button" class="btn btn-secondary">Secondary</button>
+        <i class="fa fa-medkit"></i>
+
+        <script src="{% static 'core/js/jquery.js' %}"></script>
+        <script src="{% static 'core/js/popper.js' %}"></script>
+        <script src="{% static 'core/js/fontawesome_java.js' %}"></script>
+        <script src="{% static 'core/js/bootstrap.js' %}"></script>
+    </body>
+</html>
