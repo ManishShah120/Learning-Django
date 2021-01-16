@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>User Registration</title>
+    </head>
+    <body>
+        <form action="" method="get">
+            
+            {% comment %} {{form}} {% endcomment %}
+
+
+            {% comment %} {{form.name.label_tag}}
+            {{form.email.label_tag}}
+            {{form.mobile.label_tag}} {% endcomment %}
+            
+            {% comment %} {% for field in form %}
+                {{field.label}}
+            {% endfor %} {% endcomment %}
+
+            {% comment %} {% for field in form %}
+                {{field.label_tag}}
+                {{field}}
+            {% endfor %} {% endcomment %}
+
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+</html>
