@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>User Registration</title>
+    </head>
+    <body>
+        <form action="" method="get">
+            <div>
+                <label for="id_name">Name: </label>
+                <input type="text" name="name" required id="id_name">
+            </div>
+
+            <div>
+                <label for="{{form.name.id_for_label}}">Name: </label>
+                <input type="text" name="name" required id="id_name">
+            </div>
+
+            <div>
+                <label for="{{form.name.id_for_label}}">Name: </label>
+                {{form.name}}
+            </div>
+
+            <div>
+                {{form.name.label_tag}}
+                {{form.name}}
+            </div>
+
+            <div>
+                {{form.name.label}}<br/>
+                {{form.name.value}}<br/>
+                {{form.name.html_name}}<br/>
+                {{form.name.help_text}}<br/>
+                {{form.name.field.required}}
+            </div>
+        </form>
+    </body>
+</html>
