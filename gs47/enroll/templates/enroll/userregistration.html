@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>User Registration</title>
+    </head>
+    <body>
+        {% comment %} We added `novalidate` to use the Django's validation {% endcomment %}
+        <form action="" method="POST" novalidate>
+            {% csrf_token %}
+                {{form.as_p}}
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+</html>
