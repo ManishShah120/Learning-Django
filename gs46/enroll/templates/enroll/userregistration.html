@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>User Registration</title>
+        <style>
+            .error {
+                color: yellow;
+            }
+        </style>
+    </head>
+    <body>
+        {% comment %} We added `novalidate` to use the Django's validation {% endcomment %}
+        <form action="" method="POST" novalidate>
+            {% csrf_token %}
+                {{form}}
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+</html>
