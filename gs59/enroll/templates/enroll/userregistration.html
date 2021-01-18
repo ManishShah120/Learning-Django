@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Registration</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <style>
+            .alert-success {
+                color: green;
+            }
+            .alert-info {
+                color: blue;
+            }
+            {% comment %} .error { {% endcomment %}
+            .alert-danger {
+                color: red;
+            }
+            .alert-warning {
+                color: orange;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="" method="POST">
+            {% csrf_token %}
+            {{form.as_p}}
+            <input type="submit" value="Submit"/>
+        </form>
+        {% if messages %}
+            {% for message in messages %}
+                    <p {% if message.tags %} class="alert-{{message.tags}}" {% endif %}>{{message}}</p>
+            {% endfor %}
+        {% endif %}
+    </body>
+</html>
