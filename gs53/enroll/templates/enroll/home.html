@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <title>Home</title>
+    </head>
+    <body>
+        <h1>This is Home page</h1>
+        <h1>{{ch}}</h1>
+
+
+
+        <a href="{% url 'detail' 1 %}">Student 1</a>
+        <a href="{% url 'detail' 2 %}">Student 2</a>
+        <a href="{% url 'detail' 3 %}">Student 3</a>
+
+
+        <a href="{% url 'subdetail' 1 5 %}">Sub Student 3</a>
+        <a href="{% url 'subdetail' 2 6 %}">Sub Student 3</a>
+        <a href="{% url 'subdetail' 3 7 %}">Sub Student 3</a>
+
+    </body>
+</html>
