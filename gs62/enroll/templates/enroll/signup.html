@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>User Registration</title>
+        <style>
+            .success {
+                color: green;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="" method="post" novalidate>
+            {% csrf_token %}
+            {% for fm in form %}
+                {{fm.label_tag}} {{fm}} {{fm.errors|striptags}}<br><br>
+            {% endfor %}
+            <input type="submit" value="Submit">
+        </form>
+        {% if messages %}
+            {% for message in messages %}
+                <small {% if message.tags %} class="{{message.tags}}" {% endif %}>{{message}}</small>
+            {% endfor %}
+        {% else %}
+        {% endif %}
+    </body>
+</html>
