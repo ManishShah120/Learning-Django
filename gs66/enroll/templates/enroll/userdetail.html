@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dashboard</title>
+    </head>
+    <body>
+        <h1>Profile</h1>
+        <h3>Wellcome</h3>
+        <form action="" method="POST">
+            {{form.as_p}}
+        </form>
+        <a href="{% url 'profile' %}">Profile</a>
+        <a href="{% url 'logout' %}">Logout</a>
+    </body>
+</html>
