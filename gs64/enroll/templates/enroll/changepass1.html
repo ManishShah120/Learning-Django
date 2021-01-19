@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Change Password without Old Passowrd</title>
+    </head>
+    <body>
+        <form action="" method="post" novalidate>
+            {% csrf_token %}
+            
+            {% if form.non_field_errors %}
+                {% for error in form.non_field_errors %}
+                    <p>{{error}}</p>                  
+                {% endfor %}                
+            {% endif %}
+
+            {% for fm in form %}
+                {{fm.label_tag}} {{fm}} {{fm.errors|striptags}} <br> <br>
+            {% endfor %}
+            <input type="submit" value="Save">
+        </form>
+        <a href="{% url 'profile' %}">Profile</a>
+        <a href="{% url 'logout' %}">Logout</a>
+    </body>
+</html>
