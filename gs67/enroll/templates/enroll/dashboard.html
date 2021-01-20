@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dashboard</title>
+        <meta name="description" content="">
+    </head>
+    <body>
+        <h1>Profile Page</h1>
+        <h1>Wellcome, {{name}}</h1>
+
+        {% if perms.enroll.delete_blog %}
+            <input type="button" value="Delete"> <br>
+        {% else %}
+            <h3>No Delete Permission</h3>
+        {% endif %}
+
+        {% if perms.enroll.add_blog %}
+            <input type="button" value="Add"> <br>
+        {% else %}
+            <h3>No Add Permission</h3>
+        {% endif %}
+
+
+        <a href="{% url 'logout' %}">Logout</a>
+    </body>
+</html>
