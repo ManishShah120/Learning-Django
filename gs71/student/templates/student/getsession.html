@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Get Session</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        {{name}}<br>
+        {{age}}<hr>
+        {% comment %} When you have to display it fromt eh views.py file {% endcomment %}
+        <h1>This has been displayed from the `items` Variable</h1>
+        {% for key, value in items %}
+            {{key}}: {{value}}        
+        {% endfor %}<hr>
+
+
+        <h1>This has been displayed from the `Keys` Variable</h1>
+        {% for key in keys %}
+            {{key}}
+        {% endfor %}<hr>
+
+
+
+        {% comment %} To view the keys directly without passing it from the views.py file{% endcomment %}
+        <h1>This values has been directly fetched in the template file itself</h1>
+        {% for key in request.session.keys %}
+            {{key}}        
+        {% endfor %}
+
+        <script src="" async defer></script>
+    </body>
+</html>
