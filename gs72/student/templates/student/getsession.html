@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Get Session</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        {{name}}<br> <br>
+
+        {% comment %} Inbuilt template methods in which we can get the sessionid metadata {% endcomment %}
+        <h4>get_session_cookie_age: </h4>{{request.session.get_session_cookie_age}}
+        <h4>get_expiry_age: </h4>{{request.session.get_expiry_age}}
+        <h4>get_expiry_date: </h4>{{request.session.get_expiry_date}}
+        <h4>get_expire_at_browser_close: </h4>{{request.session.get_expire_at_browser_close}}
+    </body>
+</html>
