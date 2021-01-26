@@ -1,0 +1,24 @@
+{% extends "blog/base.html" %}
+{% load static %}
+{% block title %}Home{% endblock title %}
+{% block content %}
+    <div class="col-sm-10">
+        <h3 class="text-white my-5">Home Page</h3>
+
+        {% if messages %}
+            {% for message in messages %}
+                <p {% if message.tags %} class="alert alert-{{message.tags}} mb-5" {% endif %}>{{message}}</p>
+            {% endfor %}
+        {% endif %}
+
+        {% for post in posts %}
+            <div class="jumbotron jumbotron-fluid jumbo-color">
+                <div class="container">
+                    <h1 class="display-4"><b>{{post.title}}</b></h1>
+                    <p class="lead">{{post.desc}}</p>
+                </div>
+            </div>
+        {% endfor %}
+
+    </div>
+{% endblock content %}
