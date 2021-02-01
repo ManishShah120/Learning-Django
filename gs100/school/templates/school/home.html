@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home Page</title>
+        <style>
+        table, th, tr, td {
+            border: 1px solid black
+        }
+        h5 {
+            color: red;
+        }
+        </style>
+    </head>
+    <body>
+        <h1>Query Required to get the below data:</h1><h5>{{stu_query}}</h5>
+
+        <table>
+            <h3>Student Information</h3>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Roll</th>
+            <th>City</th>
+            <th>Marks</th>
+            <th>Passing Date</th>
+            <th>Admission Date Time</th>
+            {% for student in students %}
+                <tr>
+                    <td>{{student.id}}</td>
+                    <td>{{student.name}}</td>
+                    <td>{{student.roll}}</td>
+                    <td>{{student.city}}</td>
+                    <td>{{student.marks}}</td>
+                    <td>{{student.passdate}}</td>
+                    <td>{{student.admdatetime}}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>
