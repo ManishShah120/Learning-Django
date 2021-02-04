@@ -1,0 +1,1 @@
+# Combining Proxy Model Inheritance & Custom Managers
