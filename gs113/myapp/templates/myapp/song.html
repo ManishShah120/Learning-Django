@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Song</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <style>
+            table, th, tr, td {
+                border: 1px solid black;
+            }
+        </style>
+    </head>
+    <body>
+
+        <table>
+            <h3>Song All Data</h3>
+            <th>Song Name</th>
+            <th>Song Duration</th>
+            <th>Sung By</th>
+            {% for dt1 in data1 %}
+                <tr>
+                    <td>{{dt1.song_name}}</td>
+                    <td>{{dt1.song_duration}}</td>
+                    <td>{{dt1.sung_by}}</td>
+                </tr>
+            {% endfor %}
+        </table>
+
+        <table>
+            <h3>Song Filtered By Duration</h3>
+            <th>Song Name</th>
+            <th>Song Duration</th>
+            <th>Sung By</th>
+            {% for dt2 in data2 %}
+                <tr>
+                    <td>{{dt2.song_name}}</td>
+                    <td>{{dt2.song_duration}}</td>
+                    <td>{{dt2.sung_by}}</td>
+                </tr>
+            {% endfor %}
+        </table>
+
+        <table>
+            <h3>Song Filtered by Username</h3>
+            <th>Song Name</th>
+            <th>Song Duration</th>
+            <th>Sung By</th>
+            {% for dt3 in data3 %}
+                <tr>
+                    <td>{{dt3.song_name}}</td>
+                    <td>{{dt3.song_duration}}</td>
+                    <td>{{dt3.sung_by}}</td>
+                </tr>
+            {% endfor %}
+        </table>
+
+    </body>
+</html>

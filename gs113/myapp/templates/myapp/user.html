@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>User</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <style>
+            table, th, tr, td {
+                border: 1px solid black;
+            }
+        </style>
+    </head>
+    <body>
+
+
+        <table>
+            <h3>All Users</h3>
+            <th>Username</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            {% for dt1 in data1 %}
+                <tr>
+                    <td>{{dt1.username}}</td>
+                    <td>{{dt1.first_name}}</td>
+                    <td>{{dt1.last_name}}</td>
+                    <td>{{dt1.email}}</td>
+                </tr>
+            {% endfor %}
+        </table>
+
+        <table>
+            <h3>User Filtered by User Email</h3>
+            <th>Username</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            {% for dt2 in data2 %}
+                <tr>
+                    <td>{{dt2.username}}</td>
+                    <td>{{dt2.first_name}}</td>
+                    <td>{{dt2.last_name}}</td>
+                    <td>{{dt2.email}}</td>
+                </tr>
+            {% endfor %}
+        </table>
+
+        <table>
+            <h3>User Filtered by Category</h3>
+            <th>Username</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            {% for dt3 in data3 %}
+                <tr>
+                    <td>{{dt3.username}}</td>
+                    <td>{{dt3.first_name}}</td>
+                    <td>{{dt3.last_name}}</td>
+                    <td>{{dt3.email}}</td>
+                </tr>
+            {% endfor %}
+        </table>
+
+        <table>
+            <h3>User Filtered by Pubished Date</h3>
+            <th>Username</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            {% for dt4 in data4 %}
+                <tr>
+                    <td>{{dt4.username}}</td>
+                    <td>{{dt4.first_name}}</td>
+                    <td>{{dt4.last_name}}</td>
+                    <td>{{dt4.email}}</td>
+                </tr>
+            {% endfor %}
+        </table>
+
+        <table>
+            <h3>User Filtered by Song Duration</h3>
+            <th>Username</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            {% for dt5 in data5 %}
+                <tr>
+                    <td>{{dt5.username}}</td>
+                    <td>{{dt5.first_name}}</td>
+                    <td>{{dt5.last_name}}</td>
+                    <td>{{dt5.email}}</td>
+                </tr>
+            {% endfor %}
+        </table>
+
+    </body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Post</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <style>
+            table, th, tr, td {
+                border: 1px solid black;
+            }
+        </style>
+    </head>
+    <body>
+
+        <table>
+            <h3>Post All Data</h3>
+            <th>Post Name</th>
+            <th>Post Category</th>
+            <th>Published Date</th>
+            <th>Created By</th>
+            {% for dt1 in data1 %}
+                <tr>
+                    <td>{{dt1.post_title}}</td>
+                    <td>{{dt1.post_cat}}</td>
+                    <td>{{dt1.post_publish_date}}</td>
+                    <td>{{dt1.user}}</td>
+                </tr>
+            {% endfor %}
+        </table>
+
+        <table>
+            <h3>Post Filtered by Post Category</h3>
+            <th>Post Name</th>
+            <th>Post Category</th>
+            <th>Published Date</th>
+            <th>Created By</th>
+            {% for dt2 in data2 %}
+                <tr>
+                    <td>{{dt2.post_title}}</td>
+                    <td>{{dt2.post_cat}}</td>
+                    <td>{{dt2.post_publish_date}}</td>
+                    <td>{{dt2.user}}</td>
+                </tr>
+            {% endfor %}
+        </table>
+
+        <table>
+            <h3>Post Filtered by Username</h3>
+            <th>Post Name</th>
+            <th>Post Category</th>
+            <th>Published Date</th>
+            <th>Created By</th>
+            {% for dt3 in data3 %}
+                <tr>
+                    <td>{{dt3.post_title}}</td>
+                    <td>{{dt3.post_cat}}</td>
+                    <td>{{dt3.post_publish_date}}</td>
+                    <td>{{dt3.user}}</td>
+                </tr>
+            {% endfor %}
+        </table>
+
+    </body>
+</html>
